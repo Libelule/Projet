@@ -6,12 +6,12 @@ window.addEventListener("load", afficherCarte);
 // role : ?
 // parametres : ?
 // retour : ?
-
 function afficherCarte(eve) {
 if (navigator.geolocation)
   navigator.geolocation.getCurrentPosition(actionSiSucces, actionSiPb);
 else
   console.log("Votre navigateur ne prend pas en compte la géolocalisation");
+  document.getElementById("location").innerHTML= 'location_disabled';
 }
    
 // role : ?
@@ -19,7 +19,7 @@ else
 // retour : ?
 function actionSiSucces(position){
 
-
+document.getElementById("location").innerHTML= 'my_location';
 var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 var optionsMap = {
       zoom: 5, 
