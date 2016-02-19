@@ -1,0 +1,11 @@
+#box { width: 250px;
+       border: 1px solid black;
+       background-color: rgb(195,215,235);
+       text-align: center;}
+
+
+#zone {
+	width: 250px;
+	background-color: rgb(153,102,153);
+	color: rgb(255,255,204);
+}
