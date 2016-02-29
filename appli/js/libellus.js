@@ -8,31 +8,36 @@ var directionsDisplay
 
 //----------------- FONCTIONS ----------------------
 function init(eve) {
+//Si geoloc de l'utilisateur
 	if (navigator.geolocation)
+//Envoie dans la fonction
 	  navigator.geolocation.getCurrentPosition(actionSiSucces, actionSiPb);
 	else
 	  console.log("Votre navigateur ne prend pas en compte la géolocalisation");
+//Changement d'icône dans le menu
 		document.getElementById("location").innerHTML= 'location_disabled';
 	}
 
 function actionSiSucces(position){
+	//Changement d'icône dans le menu
 	document.getElementById("location").innerHTML= 'my_location';
+	//Coordonnée
   var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
+	//Option de la carte
   optionsMap = {
       zoom: 10,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.SATTELITE
 	};
-
+	//Affichage de la map
   map = new google.maps.Map(document.getElementById('zone'), optionsMap);
-
+	//Option du marqueur
   var optionsMarker = {
       position: latlng,
       map: map,
       title:"Vous etes ici"
 	};
-
+	//affichage du marqueur
 	var marker = new google.maps.Marker(optionsMarker);
 
   //----test affichage itineraires-------
@@ -42,7 +47,7 @@ function actionSiSucces(position){
   });
 
 }
-
+//Affichage de ligne 
 function afficher(dataJSON){
   directionsService = new google.maps.DirectionsService();
   directionsDisplay = new google.maps.DirectionsRenderer({

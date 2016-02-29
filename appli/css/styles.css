@@ -109,12 +109,3 @@ _:-ms-input-placeholder, :root .demo-graphs {
 _:-ms-input-placeholder, :root .demo-graph {
   max-height: 300px;
 }
-/* TODO end */
-
-.parent{
-    display: flex;
-    font-weight: 500;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 12.5em;
-}

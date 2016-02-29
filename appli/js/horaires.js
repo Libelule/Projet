@@ -1,13 +1,16 @@
 function afficheRes(dataJSON) {
+//Récupération de la ligne
 var res = $("#ligne");
 res.empty();
 
 for (var i=0 ; i < dataJSON.length ; i++) {
+//Récupération des données
 var arret= dataJSON[i].stop_id;
 var heure = dataJSON[i].arrival_time;
 var sequence =dataJSON[i].stop_sequence;
 if (sequence != 0)
 {
+//Affichage des horaires
 res.append("<p>"+arret+" | "+heure+"</p>");
 $("#ligne").append(res);
 }
@@ -19,7 +22,7 @@ $("#ligne").append(res);
 }
 }
 
-
+//Requêtes Json
 $("#1").click(function(){
     var code=$("#1").val();
 	$.get("http://vsp149406.nfrance.com/~16_dalla-nora/PHP_info/projet_commun/?code="+code+"",null,afficheRes, "json");
