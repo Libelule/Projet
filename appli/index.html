@@ -23,6 +23,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -48,74 +49,17 @@
           <div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-color-text--grey-600">
                 <h3>Lignes à afficher</h3>
-                <ul class="parent">
-                   <li>
-                    <label for="chkbox11" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox11" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--red-600 mdl-checkbox__label">Ligne Chrono</span>
-                    </label>
-                  </li>
-                  <li>
-                    <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--green-800 mdl-checkbox__label">Ligne 1</span>
-                    </label>
-                  </li>
-                  <li>
-                    <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--yellow-800 mdl-checkbox__label">Ligne 2</span>
-                    </label>
-                  </li>
-                  <li>
-                    <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--orange-800 mdl-checkbox__label">Ligne 3</span>
-                    </label>
-                  </li>
-                  <li>
-                    <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--green-500 mdl-checkbox__label">Ligne 4</span>
-                    </label>
-                  </li>
-                    <li>
-                    <label for="chkbox5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox5" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--blue-500 mdl-checkbox__label">Ligne 5</span>
-                    </label>
-                  </li>
-                    <li>
-                    <label for="chkbox6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox6" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--blue-800 mdl-checkbox__label">Ligne 6</span>
-                    </label>
-                  </li>
-                    <li>
-                    <label for="chkbox7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox7" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--pink-300 mdl-checkbox__label">Ligne 7</span>
-                    </label>
-                  </li>
-                    <li>
-                    <label for="chkbox8" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox8" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--red-600 mdl-checkbox__label">Ligne 8</span>
-                    </label>
-                  </li>
-                    <li>
-                    <label for="chkbox9" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox9" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--brown-900 mdl-checkbox__label">Ligne 9</span>
-                    </label>
-                  </li>
-                    <li>
-                    <label for="chkbox10" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox10" class="mdl-checkbox__input">
-                      <span class="mdl-color-text--pink-700 mdl-checkbox__label">Ligne 10</span>
-                    </label>
-                  </li>
-                </ul>
+                      <button class="mdl-color-text--red-600 mdl-button mdl-js-button mdl-js-ripple-effect" id="lch" value="LchronoAller0001">Ligne Chrono</button>
+                      <button class="mdl-color-text--green-800 mdl-button mdl-js-button mdl-js-ripple-effect" id="l1" value="L1Aller0001">Ligne 1</button>
+                      <button class="mdl-color-text--yellow-800 mdl-button mdl-js-button mdl-js-ripple-effect" id="l2" value="L2Aller0001">Ligne 2</button>
+                      <button class="mdl-color-text--orange-800 mdl-button mdl-js-button mdl-js-ripple-effect" id="l3" value="L3Aller0001">Ligne 3</button>
+                      <button class="mdl-color-text--green-500 mdl-button mdl-js-button mdl-js-ripple-effect" id="l4" value="L4Aller0001">Ligne 4</button>
+                      <button class="mdl-color-text--blue-500 mdl-button mdl-js-button mdl-js-ripple-effect" id="l5" value="L5Aller0001">Ligne 5</button>
+                      <button class="mdl-color-text--blue-800 mdl-button mdl-js-button mdl-js-ripple-effect" id="l6" value="L6Aller0001">Ligne 6</button>
+                      <button class="mdl-color-text--pink-300 mdl-button mdl-js-button mdl-js-ripple-effect" id="l7" value="L7Aller0001">Ligne 7</button>
+                      <button class="mdl-color-text--red-600 mdl-button mdl-js-button mdl-js-ripple-effect" id="l8" value="L8Aller0001">Ligne 8</button>
+                      <button class="mdl-color-text--brown-900 mdl-button mdl-js-button mdl-js-ripple-effect" id="l9" value="L9Aller0001">Ligne 9</button>
+                      <button class="mdl-color-text--pink-700 mdl-button mdl-js-button mdl-js-ripple-effect" id="l10" value="L10Aller0001">Ligne 10</button>
               </div>
           </div>
         </div>
@@ -123,5 +67,5 @@
   </body>
       <script src="js/material.min.js"></script>
       <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
-      <script type="text/javascript" src="js/tp6_2.js"></script>
+      <script type="text/javascript" src="js/libellus.js"></script>
 </html>

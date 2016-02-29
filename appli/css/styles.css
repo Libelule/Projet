@@ -16,6 +16,10 @@ html, body {
 .demo-layout .mdl-layout__header .mdl-layout__drawer-button {
   color:    white;
 }
+#iti{
+  display: flex;
+  justify-content: center;
+}
 .mdl-layout__drawer .avatar {
   margin-bottom: 16px;
 }
