@@ -11,9 +11,11 @@ function init(eve) {
 	  navigator.geolocation.getCurrentPosition(actionSiSucces, actionSiPb);
 	else
 	  console.log("Votre navigateur ne prend pas en compte la géolocalisation");
+		document.getElementById("location").innerHTML= 'location_disabled';
 	}
 
 function actionSiSucces(position){
+	document.getElementById("location").innerHTML= 'my_location';
   var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
   optionsMap = {
