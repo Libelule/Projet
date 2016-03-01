@@ -47,7 +47,7 @@ function actionSiSucces(position){
   });
 
 }
-//Affichage de ligne 
+//Affichage de ligne
 function afficher(dataJSON){
   directionsService = new google.maps.DirectionsService();
   directionsDisplay = new google.maps.DirectionsRenderer({
@@ -58,9 +58,8 @@ function afficher(dataJSON){
 
   directionsDisplay.setMap(map);
 
-  if(dataJSON[i].trip_id == "L1Aller0001"){
+
     directionsDisplay.polylineOptions.strokeColor = "green";
-  }
   var waypts = [];
   for(i=1; i<=8; i++){
     var latlng = new google.maps.LatLng(dataJSON[i].stop_lat, dataJSON[i].stop_lon)
